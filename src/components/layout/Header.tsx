@@ -15,21 +15,21 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border/50">
-      <nav className="container-section flex items-center justify-between py-4" aria-label="Global">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md shadow-nav">
+      <nav className="container-section flex items-center justify-between py-4 lg:py-5" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">M+</span>
+          <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
+            <div className="w-11 h-11 rounded-2xl bg-primary flex items-center justify-center shadow-soft group-hover:shadow-card transition-all duration-300">
+              <span className="text-primary-foreground font-bold text-lg font-heading">M+</span>
             </div>
-            <span className="font-bold text-xl text-primary">MENTORA PLUS</span>
+            <span className="font-bold text-xl text-primary font-heading tracking-tight">MENTORA PLUS</span>
           </Link>
         </div>
         
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
+            className="-m-2.5 inline-flex items-center justify-center rounded-xl p-3 text-foreground hover:bg-muted transition-colors"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Otvori meni</span>
@@ -37,16 +37,16 @@ export function Header() {
           </button>
         </div>
         
-        <div className="hidden lg:flex lg:gap-x-8">
+        <div className="hidden lg:flex lg:gap-x-10">
           {navigation.map((item) => (
             <Link
               key={item.name}
               to={item.href}
               className={cn(
-                "text-base font-medium transition-colors hover:text-primary relative py-2",
+                "text-base font-semibold transition-all duration-300 hover:text-primary relative py-2 px-1",
                 location.pathname === item.href
                   ? "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-highlight after:rounded-full"
-                  : "text-muted-foreground"
+                  : "text-muted-foreground hover:-translate-y-0.5"
               )}
             >
               {item.name}
@@ -63,33 +63,33 @@ export function Header() {
       
       {/* Mobile menu */}
       <div className={cn("lg:hidden", mobileMenuOpen ? "block" : "hidden")}>
-        <div className="fixed inset-0 z-50" />
-        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-card px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border/10">
+        <div className="fixed inset-0 z-50 bg-foreground/20 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
+        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-card px-6 py-6 sm:max-w-sm shadow-hover">
           <div className="flex items-center justify-between">
-            <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">M+</span>
+            <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
+              <div className="w-11 h-11 rounded-2xl bg-primary flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-lg font-heading">M+</span>
               </div>
-              <span className="font-bold text-xl text-primary">MENTORA PLUS</span>
+              <span className="font-bold text-xl text-primary font-heading">MENTORA PLUS</span>
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-foreground"
+              className="-m-2.5 rounded-xl p-3 text-foreground hover:bg-muted transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Zatvori meni</span>
               <X className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-border/10">
-              <div className="space-y-2 py-6">
+          <div className="mt-8 flow-root">
+            <div className="-my-6 divide-y divide-border/50">
+              <div className="space-y-2 py-8">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
                     className={cn(
-                      "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition-colors",
+                      "-mx-3 block rounded-2xl px-5 py-4 text-lg font-semibold leading-7 transition-all duration-200",
                       location.pathname === item.href
                         ? "text-primary bg-muted"
                         : "text-foreground hover:bg-muted"
@@ -100,8 +100,8 @@ export function Header() {
                   </Link>
                 ))}
               </div>
-              <div className="py-6">
-                <Button variant="highlight" className="w-full" asChild>
+              <div className="py-8">
+                <Button variant="highlight" className="w-full" size="lg" asChild>
                   <Link to="/o-nama#kontakt" onClick={() => setMobileMenuOpen(false)}>
                     Kontaktiraj nas
                   </Link>
