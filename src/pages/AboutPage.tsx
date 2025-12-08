@@ -11,11 +11,12 @@ import {
   Eye,
   Users,
   GraduationCap,
-  Stethoscope,
   Brain,
   Send,
   CheckCircle,
-  Star
+  Star,
+  Clock,
+  MessageCircle
 } from "lucide-react";
 
 const team = [
@@ -73,14 +74,20 @@ export default function AboutPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-24 gradient-hero">
-        <div className="container-section">
+      <section className="py-24 lg:py-32 gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container-section relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">O nama</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
               Zašto je nastala{" "}
               <span className="text-gradient">MENTORA PLUS</span>?
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
               Vjerujemo da svako dijete zaslužuje priliku da uči, raste i ostvari 
               svoj puni potencijal u sigurnom i podržavajućem okruženju.
             </p>
@@ -89,12 +96,15 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-24 bg-card">
+      <section className="section-padding bg-card">
         <div className="container-section">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Naša priča</h2>
-              <div className="space-y-4 text-muted-foreground">
+              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Naša priča</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8">
+                Kako je sve počelo
+              </h2>
+              <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
                 <p>
                   MENTORA PLUS je nastala iz duboke želje da pomognemo djeci sa smetnjama 
                   u razvoju i njihovim porodicama. Shvatili smo da postoji potreba za 
@@ -115,42 +125,42 @@ export default function AboutPage() {
             
             <div className="grid grid-cols-2 gap-6">
               <Card className="card-hover bg-primary/5 border-primary/20">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <CardHeader className="text-center p-6">
+                  <div className="w-16 h-16 bg-primary/15 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Target className="w-8 h-8 text-primary" />
                   </div>
                   <CardTitle className="text-lg">Naša misija</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-center">
+                <CardContent className="pt-0 px-6 pb-6">
+                  <CardDescription className="text-center leading-relaxed">
                     Osnažiti svako dijete kroz prilagođeno učenje i podršku cijeloj porodici.
                   </CardDescription>
                 </CardContent>
               </Card>
               
               <Card className="card-hover bg-highlight/10 border-highlight/20">
-                <CardHeader className="text-center">
+                <CardHeader className="text-center p-6">
                   <div className="w-16 h-16 bg-highlight/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Eye className="w-8 h-8 text-highlight" />
                   </div>
                   <CardTitle className="text-lg">Naša vizija</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-center">
+                <CardContent className="pt-0 px-6 pb-6">
+                  <CardDescription className="text-center leading-relaxed">
                     Svijet u kojem svako dijete ima pristup kvalitetnoj edukaciji bez obzira na izazove.
                   </CardDescription>
                 </CardContent>
               </Card>
               
               <Card className="card-hover bg-accent/10 border-accent/20 col-span-2">
-                <CardHeader className="text-center">
+                <CardHeader className="text-center p-6">
                   <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Star className="w-8 h-8 text-accent" />
                   </div>
                   <CardTitle className="text-lg">Dugoročni cilj</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-center">
+                <CardContent className="pt-0 px-6 pb-6">
+                  <CardDescription className="text-center leading-relaxed">
                     Postati vodeća platforma za inkluzivno obrazovanje u regiji, 
                     pomažući hiljadama porodica na njihovom putu.
                   </CardDescription>
@@ -162,13 +172,16 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-muted/50">
-        <div className="container-section">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+      <section className="section-padding bg-section-light relative">
+        <div className="absolute top-0 left-0 right-0 h-16 bg-card" style={{ borderRadius: '0 0 50% 50% / 0 0 100% 100%' }} />
+        
+        <div className="container-section pt-8">
+          <div className="text-center mb-20">
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Naš tim</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Ko stoji iza MENTORA PLUS?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Naš tim čine stručnjaci posvećeni podršci djece i porodica.
             </p>
           </div>
@@ -178,21 +191,21 @@ export default function AboutPage() {
               const colorClasses: Record<string, { bg: string; text: string }> = {
                 primary: { bg: "bg-primary/10", text: "text-primary" },
                 highlight: { bg: "bg-highlight/20", text: "text-highlight" },
-                accent: { bg: "bg-accent/20", text: "text-accent" },
-                secondary: { bg: "bg-secondary", text: "text-secondary-foreground" },
+                accent: { bg: "bg-accent/15", text: "text-accent" },
+                secondary: { bg: "bg-secondary/40", text: "text-secondary-foreground" },
               };
               const colors = colorClasses[member.color];
               
               return (
-                <Card key={index} className="card-hover text-center">
-                  <CardHeader>
-                    <div className={`w-20 h-20 ${colors.bg} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <member.icon className={`w-10 h-10 ${colors.text}`} />
+                <Card key={index} className="card-hover text-center bg-card">
+                  <CardHeader className="pb-4">
+                    <div className={`w-24 h-24 ${colors.bg} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <member.icon className={`w-12 h-12 ${colors.text}`} />
                     </div>
-                    <CardTitle>{member.role}</CardTitle>
+                    <CardTitle className="text-xl">{member.role}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription>{member.description}</CardDescription>
+                    <CardDescription className="leading-relaxed">{member.description}</CardDescription>
                   </CardContent>
                 </Card>
               );
@@ -202,62 +215,70 @@ export default function AboutPage() {
       </section>
 
       {/* Contact Section */}
-      <section id="kontakt" className="py-24 bg-card scroll-mt-24">
-        <div className="container-section">
-          <div className="grid lg:grid-cols-2 gap-16">
+      <section id="kontakt" className="section-padding bg-card relative scroll-mt-24">
+        <div className="absolute top-0 left-0 right-0 h-16 bg-section-light" style={{ borderRadius: '0 0 50% 50% / 0 0 100% 100%' }} />
+        
+        <div className="container-section pt-8">
+          <div className="text-center mb-16">
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Kontakt</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Javite nam se
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Imate pitanja? Želite saznati više? Tu smo za vas.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Kontaktirajte nas
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Imate pitanja? Želite saznati više? Tu smo za vas. 
-                Pošaljite nam poruku i odgovorićemo u najkraćem mogućem roku.
-              </p>
+              <h3 className="text-2xl font-bold text-foreground mb-8">
+                Zašto nas kontaktirati?
+              </h3>
               
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-highlight/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-highlight" />
+                <div className="flex items-start gap-5 p-5 bg-muted/50 rounded-2xl">
+                  <div className="w-14 h-14 bg-highlight/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-7 h-7 text-highlight" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Brz odgovor</h3>
-                    <p className="text-muted-foreground">Odgovaramo na upite u roku od 24 sata.</p>
+                    <h4 className="font-bold text-foreground text-lg mb-1">Brz odgovor</h4>
+                    <p className="text-muted-foreground leading-relaxed">Odgovaramo na upite u roku od 24 sata.</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Heart className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-5 p-5 bg-muted/50 rounded-2xl">
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Heart className="w-7 h-7 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Puna podrška</h3>
-                    <p className="text-muted-foreground">Naš tim je tu da vam pomogne u svakom koraku.</p>
+                    <h4 className="font-bold text-foreground text-lg mb-1">Puna podrška</h4>
+                    <p className="text-muted-foreground leading-relaxed">Naš tim je tu da vam pomogne u svakom koraku.</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Stethoscope className="w-6 h-6 text-accent" />
+                <div className="flex items-start gap-5 p-5 bg-muted/50 rounded-2xl">
+                  <div className="w-14 h-14 bg-accent/15 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-7 h-7 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Stručna pomoć</h3>
-                    <p className="text-muted-foreground">Povezat ćemo vas sa pravim stručnjakom za vaše potrebe.</p>
+                    <h4 className="font-bold text-foreground text-lg mb-1">Stručna pomoć</h4>
+                    <p className="text-muted-foreground leading-relaxed">Povezat ćemo vas sa pravim stručnjakom za vaše potrebe.</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <Card className="shadow-hover">
+            <Card className="shadow-hover bg-card">
               <CardHeader>
-                <CardTitle>Pošaljite upit</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-2xl">Pošaljite upit</CardTitle>
+                <CardDescription className="text-base">
                   Popunite formular ispod i javićemo vam se uskoro.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-foreground">
+                    <label htmlFor="name" className="text-sm font-semibold text-foreground">
                       Ime i prezime
                     </label>
                     <Input
@@ -266,12 +287,12 @@ export default function AboutPage() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="h-12"
+                      className="h-14"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-foreground">
+                    <label htmlFor="email" className="text-sm font-semibold text-foreground">
                       Email adresa
                     </label>
                     <Input
@@ -281,12 +302,12 @@ export default function AboutPage() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
-                      className="h-12"
+                      className="h-14"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-foreground">
+                    <label htmlFor="message" className="text-sm font-semibold text-foreground">
                       Poruka
                     </label>
                     <Textarea
@@ -316,7 +337,7 @@ export default function AboutPage() {
                     )}
                   </Button>
                   
-                  <p className="text-sm text-muted-foreground text-center">
+                  <p className="text-sm text-muted-foreground text-center pt-2">
                     Odgovaramo u najkraćem mogućem roku. Tu smo za vas.
                   </p>
                 </form>

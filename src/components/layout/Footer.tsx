@@ -1,46 +1,55 @@
 import { Link } from "react-router-dom";
-import { Heart, Mail, Phone } from "lucide-react";
+import { Heart, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container-section py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      {/* Curved top edge */}
+      <div className="h-12 bg-card" style={{ borderRadius: '0 0 50% 50% / 0 0 100% 100%' }} />
+      
+      <div className="container-section py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-highlight flex items-center justify-center">
-                <span className="text-highlight-foreground font-bold text-lg">M+</span>
+            <Link to="/" className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-2xl bg-highlight flex items-center justify-center shadow-soft">
+                <span className="text-highlight-foreground font-bold text-xl font-heading">M+</span>
               </div>
-              <span className="font-bold text-xl">MENTORA PLUS</span>
+              <span className="font-bold text-2xl font-heading">MENTORA PLUS</span>
             </Link>
-            <p className="text-primary-foreground/80 max-w-md leading-relaxed">
-              Digitalna edukativna platforma za djecu sa smetnjama u razvoju, njihove roditelje i edukatore. 
-              Podrška koja osnažuje.
+            <p className="text-primary-foreground/80 max-w-md leading-relaxed text-lg mb-6">
+              Digitalna edukativna platforma za djecu sa smetnjama u razvoju, njihove roditelje i edukatore.
+            </p>
+            <p className="text-highlight font-semibold text-lg italic">
+              "Podrška koja osnažuje."
             </p>
           </div>
           
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Brzi linkovi</h3>
-            <ul className="space-y-3">
+            <h3 className="font-bold text-lg mb-6 font-heading">Brzi linkovi</h3>
+            <ul className="space-y-4">
               <li>
-                <Link to="/" className="text-primary-foreground/80 hover:text-highlight transition-colors">
+                <Link to="/" className="text-primary-foreground/80 hover:text-highlight transition-colors text-base flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-highlight" />
                   Početna
                 </Link>
               </li>
               <li>
-                <Link to="/programi" className="text-primary-foreground/80 hover:text-highlight transition-colors">
+                <Link to="/programi" className="text-primary-foreground/80 hover:text-highlight transition-colors text-base flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-highlight" />
                   Programi
                 </Link>
               </li>
               <li>
-                <Link to="/o-nama" className="text-primary-foreground/80 hover:text-highlight transition-colors">
+                <Link to="/o-nama" className="text-primary-foreground/80 hover:text-highlight transition-colors text-base flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-highlight" />
                   O nama
                 </Link>
               </li>
               <li>
-                <Link to="/o-nama#kontakt" className="text-primary-foreground/80 hover:text-highlight transition-colors">
+                <Link to="/o-nama#kontakt" className="text-primary-foreground/80 hover:text-highlight transition-colors text-base flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-highlight" />
                   Kontakt
                 </Link>
               </li>
@@ -49,16 +58,20 @@ export function Footer() {
           
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Kontakt</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-primary-foreground/80">
-                <Mail className="w-5 h-5 text-highlight" />
+            <h3 className="font-bold text-lg mb-6 font-heading">Kontakt</h3>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3 text-primary-foreground/80">
+                <div className="w-10 h-10 rounded-xl bg-highlight/20 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-highlight" />
+                </div>
                 <a href="mailto:info@mentoraplus.com" className="hover:text-highlight transition-colors">
                   info@mentoraplus.com
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-primary-foreground/80">
-                <Phone className="w-5 h-5 text-highlight" />
+              <li className="flex items-center gap-3 text-primary-foreground/80">
+                <div className="w-10 h-10 rounded-xl bg-highlight/20 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-highlight" />
+                </div>
                 <a href="tel:+38761000000" className="hover:text-highlight transition-colors">
                   +387 61 000 000
                 </a>
@@ -67,12 +80,12 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-primary-foreground/60 text-sm">
+        <div className="border-t border-primary-foreground/20 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-primary-foreground/60 text-base">
             © {new Date().getFullYear()} MENTORA PLUS. Sva prava zadržana.
           </p>
-          <p className="text-primary-foreground/60 text-sm flex items-center gap-1">
-            Napravljeno sa <Heart className="w-4 h-4 text-highlight fill-highlight" /> za svako dijete
+          <p className="text-primary-foreground/60 text-base flex items-center gap-2">
+            Napravljeno sa <Heart className="w-5 h-5 text-highlight fill-highlight animate-pulse-gentle" /> za svako dijete
           </p>
         </div>
       </div>
