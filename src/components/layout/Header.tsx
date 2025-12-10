@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: "Početna", href: "/" },
-  { name: "Programi", href: "/programi" },
-  { name: "O nama", href: "/o-nama" },
+  { name: "Home", href: "/" },
+  { name: "Programs", href: "/programi" },
+  { name: "About Us", href: "/o-nama" },
 ];
 
 export function Header() {
@@ -32,7 +32,7 @@ export function Header() {
             className="-m-2.5 inline-flex items-center justify-center rounded-xl p-3 text-foreground hover:bg-muted transition-colors"
             onClick={() => setMobileMenuOpen(true)}
           >
-            <span className="sr-only">Otvori meni</span>
+            <span className="sr-only">Open menu</span>
             <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
@@ -56,7 +56,7 @@ export function Header() {
         
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button variant="highlight" asChild>
-            <Link to="/o-nama#kontakt">Kontaktiraj nas</Link>
+            <Link to="/o-nama#kontakt">Contact</Link>
           </Button>
         </div>
       </nav>
@@ -77,7 +77,7 @@ export function Header() {
               className="-m-2.5 rounded-xl p-3 text-foreground hover:bg-muted transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span className="sr-only">Zatvori meni</span>
+              <span className="sr-only">Close menu</span>
               <X className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
@@ -103,7 +103,7 @@ export function Header() {
               <div className="py-8">
                 <Button variant="highlight" className="w-full" size="lg" asChild>
                   <Link to="/o-nama#kontakt" onClick={() => setMobileMenuOpen(false)}>
-                    Kontaktiraj nas
+                    Contact
                   </Link>
                 </Button>
               </div>

@@ -23,68 +23,68 @@ import {
 
 const programs = [
   {
-    id: "ti-i-ja",
-    title: "Ti i Ja",
+    id: "me-myself",
+    title: "Me & Myself",
     icon: Heart,
     color: "highlight",
-    description: "Emocionalni i socijalni razvoj kroz razumijevanje sebe i drugih.",
+    description: "Emotional awareness, behavior, self-confidence, and healthy daily habits.",
     topics: [
-      { icon: Smile, label: "Emocije" },
-      { icon: Users, label: "Ponašanje" },
-      { icon: Brain, label: "Samopouzdanje" },
-      { icon: Heart, label: "Zdrave navike" },
+      { icon: Smile, label: "Emotions" },
+      { icon: Users, label: "Behavior" },
+      { icon: Brain, label: "Self-Confidence" },
+      { icon: Heart, label: "Healthy Habits" },
     ]
   },
   {
-    id: "jezici",
-    title: "Jezici",
+    id: "languages",
+    title: "Languages",
     icon: Languages,
     color: "primary",
-    description: "Razvoj jezičkih vještina i komunikacije na maternjem i stranom jeziku.",
+    description: "Serbian and English language basics, communication, and speech development.",
     topics: [
-      { icon: MessageCircle, label: "Srpski" },
-      { icon: Globe, label: "Engleski" },
-      { icon: MessageCircle, label: "Govor i komunikacija" },
+      { icon: MessageCircle, label: "Serbian" },
+      { icon: Globe, label: "English" },
+      { icon: MessageCircle, label: "Communication" },
     ]
   },
   {
-    id: "okolina",
-    title: "Okolina",
+    id: "environment",
+    title: "Environment",
     icon: Leaf,
     color: "accent",
-    description: "Upoznavanje svijeta oko nas kroz prirodu, društvo i istoriju.",
+    description: "Nature, society, history, geography, and basic biology — explained in a child-friendly way.",
     topics: [
-      { icon: Leaf, label: "Priroda" },
-      { icon: Users, label: "Društvo" },
-      { icon: Clock, label: "Istorija" },
-      { icon: MapPin, label: "Geografija" },
-      { icon: Microscope, label: "Biologija" },
+      { icon: Leaf, label: "Nature" },
+      { icon: Users, label: "Society" },
+      { icon: Clock, label: "History" },
+      { icon: MapPin, label: "Geography" },
+      { icon: Microscope, label: "Biology" },
     ]
   },
   {
-    id: "matematika",
-    title: "Matematika",
+    id: "mathematics",
+    title: "Mathematics",
     icon: Calculator,
     color: "secondary",
-    description: "Razvoj logičkog mišljenja i matematičkih vještina kroz praktične primjere.",
+    description: "Numbers, logic, everyday problem-solving, and thinking skills.",
     topics: [
-      { icon: Calculator, label: "Brojevi" },
-      { icon: Brain, label: "Logika" },
-      { icon: Brain, label: "Razmišljanje" },
-      { icon: Users, label: "Svakodnevni problemi" },
+      { icon: Calculator, label: "Numbers" },
+      { icon: Brain, label: "Logic" },
+      { icon: Brain, label: "Thinking" },
+      { icon: Users, label: "Everyday Problems" },
     ]
   },
   {
-    id: "sigurnost",
-    title: "Sigurnost",
+    id: "safety",
+    title: "Safety",
     icon: Shield,
     color: "highlight",
-    description: "Učenje o sigurnosti u svakodnevnom životu i digitalnom svijetu.",
+    description: "Everyday safety, traffic safety, digital safety, and responsible internet use.",
     topics: [
-      { icon: Shield, label: "Svakodnevna sigurnost" },
-      { icon: Car, label: "Saobraćaj" },
-      { icon: Wifi, label: "Digitalna sigurnost" },
-      { icon: Globe, label: "Internet i mreže" },
+      { icon: Shield, label: "Everyday Safety" },
+      { icon: Car, label: "Traffic" },
+      { icon: Wifi, label: "Digital Safety" },
+      { icon: Globe, label: "Internet Use" },
     ]
   },
 ];
@@ -108,15 +108,15 @@ export default function ProgramsPage() {
         
         <div className="container-section relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Edukativni programi</span>
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Educational Programs</span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
-              Šta djeca uče na{" "}
+              What Children Learn on the{" "}
               <span className="text-gradient">MENTORA PLUS</span>{" "}
-              platformi?
+              Platform
             </h1>
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
-              Naši programi su pažljivo osmišljeni da podrže cjelokupni razvoj djeteta 
-              kroz prilagođene i zabavne aktivnosti.
+              Our programs are carefully designed to support the overall development of every child 
+              through adapted and engaging activities.
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function ProgramsPage() {
                     </CardHeader>
                     
                     <CardContent className="md:col-span-2 p-10 bg-muted/30">
-                      <h3 className="font-bold text-foreground text-lg mb-8">Teme koje pokrivamo:</h3>
+                      <h3 className="font-bold text-foreground text-lg mb-8">Topics we cover:</h3>
                       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                         {program.topics.map((topic, topicIndex) => (
                           <div 
@@ -165,6 +165,13 @@ export default function ProgramsPage() {
               );
             })}
           </div>
+          
+          {/* Trust line */}
+          <div className="text-center mt-16">
+            <p className="text-lg text-muted-foreground italic max-w-2xl mx-auto">
+              Every program is designed with care, responsibility, and child-centered development.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -177,15 +184,15 @@ export default function ProgramsPage() {
         
         <div className="container-section relative z-10 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent-foreground mb-8 leading-tight max-w-3xl mx-auto">
-            Želite saznati više o našim programima?
+            Want to learn more about our programs?
           </h2>
           <p className="text-lg lg:text-xl text-accent-foreground/80 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Kontaktirajte nas za detaljnije informacije o programima i kako možemo 
-            pomoći vašem djetetu da napreduje.
+            Contact us for more detailed information about our programs and how we can 
+            help your child thrive.
           </p>
           <Button variant="highlight" size="xl" asChild>
             <Link to="/o-nama#kontakt">
-              Kontaktiraj nas
+              Contact Us
               <ArrowRight className="w-6 h-6" />
             </Link>
           </Button>

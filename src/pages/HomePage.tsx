@@ -34,29 +34,29 @@ export default function HomePage() {
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2.5 bg-highlight/15 border border-highlight/30 text-foreground px-5 py-2.5 rounded-full text-sm font-semibold mb-8 animate-fade-up">
                 <Sparkles className="w-4 h-4 text-highlight" />
-                <span>Digitalna edukativna platforma</span>
+                <span>Digital Educational Platform</span>
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-[1.15] mb-8 animate-fade-up animation-delay-100">
-                Podrška koja{" "}
-                <span className="text-gradient">osnažuje</span>{" "}
-                svako dijete.
+                Support that{" "}
+                <span className="text-gradient">empowers</span>{" "}
+                every child.
               </h1>
               
               <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-up animation-delay-200">
-                Digitalna edukativna platforma za djecu sa smetnjama u razvoju, 
-                njihove roditelje i edukatore.
+                A modern educational platform for children with developmental disabilities, 
+                created to support learning, emotional growth, and family confidence.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start animate-fade-up animation-delay-300">
                 <Button variant="hero" size="lg" asChild>
                   <Link to="/programi">
-                    Saznaj više
+                    Explore the Platform
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>
                 <Button variant="heroOutline" size="lg" asChild>
-                  <Link to="/o-nama#kontakt">Kontaktiraj nas</Link>
+                  <Link to="/o-nama#kontakt">Contact Us</Link>
                 </Button>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function HomePage() {
               <div className="relative rounded-4xl overflow-hidden shadow-hover">
                 <img 
                   src={heroImage} 
-                  alt="Djeca, roditelji i edukatori zajedno uče i rastu" 
+                  alt="Children, parents and educators learning and growing together" 
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -77,7 +77,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="font-bold text-2xl text-foreground font-heading">500+</p>
-                    <p className="text-sm text-muted-foreground font-medium">Sretnih porodica</p>
+                    <p className="text-sm text-muted-foreground font-medium">Happy Families</p>
                   </div>
                 </div>
               </div>
@@ -94,12 +94,12 @@ export default function HomePage() {
       <section className="section-padding bg-card relative">
         <div className="container-section">
           <div className="text-center mb-20">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">O platformi</span>
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">About the Platform</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Šta je MENTORA PLUS?
+              What is MENTORA PLUS?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Sveobuhvatna platforma koja podržava cijelu porodicu na putu razvoja i učenja.
+              A comprehensive platform supporting the whole family on their journey of development and learning.
             </p>
           </div>
           
@@ -109,12 +109,12 @@ export default function HomePage() {
                 <div className="w-20 h-20 icon-container icon-container-primary rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <BookOpen className="w-10 h-10 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">Edukacija djece</CardTitle>
+                <CardTitle className="text-2xl">Personalized Learning</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  Prilagođeni programi učenja koji poštuju individualne potrebe svakog djeteta i 
-                  potiču razvoj na zabavan i siguran način.
+                  Structured educational content adapted to each child's needs and abilities, 
+                  encouraging development in a fun and safe way.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -124,12 +124,12 @@ export default function HomePage() {
                 <div className="w-20 h-20 icon-container icon-container-highlight rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-10 h-10 text-highlight" />
                 </div>
-                <CardTitle className="text-2xl">Podrška roditeljima</CardTitle>
+                <CardTitle className="text-2xl">Parental Support</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  Blog članci, resursi i savjeti koji pomažu roditeljima da se osjećaju 
-                  podržano i osnaženo na svom putu.
+                  Educational blogs, expert advice, and emotional guidance for families 
+                  to feel supported and empowered on their journey.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -139,12 +139,12 @@ export default function HomePage() {
                 <div className="w-20 h-20 icon-container icon-container-accent rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <GraduationCap className="w-10 h-10 text-accent" />
                 </div>
-                <CardTitle className="text-2xl">Resursi za edukatore</CardTitle>
+                <CardTitle className="text-2xl">Professional Resources</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  Stručni materijali i alati za edukatore i terapeute koji rade sa 
-                  djecom sa smetnjama u razvoju.
+                  A platform built for collaboration between parents, educators, and therapists 
+                  working with children with developmental disabilities.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -159,12 +159,12 @@ export default function HomePage() {
         
         <div className="container-section pt-8">
           <div className="text-center mb-20">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Naša zajednica</span>
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Our Community</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Kome je namijenjena platforma?
+              Who is MENTORA PLUS for?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              MENTORA PLUS je dizajnirana za sve koji žele podržati razvoj djece.
+              MENTORA PLUS is designed for everyone who wants to support children's development.
             </p>
           </div>
           
@@ -174,12 +174,12 @@ export default function HomePage() {
                 <div className="w-24 h-24 bg-secondary/40 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Baby className="w-12 h-12 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Djeca sa smetnjama u razvoju</CardTitle>
+                <CardTitle className="text-xl">For Children</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-base leading-relaxed">
-                  Prilagođeni sadržaji koji poštuju tempo svakog djeteta i potiču razvoj 
-                  kroz igru i zabavu.
+                  A safe digital space for learning, emotional development, and confidence building 
+                  that respects each child's pace.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -189,11 +189,12 @@ export default function HomePage() {
                 <div className="w-24 h-24 bg-highlight/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Heart className="w-12 h-12 text-highlight" />
                 </div>
-                <CardTitle className="text-xl">Roditelji</CardTitle>
+                <CardTitle className="text-xl">For Parents</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-base leading-relaxed">
-                  Podrška, savjeti i zajednica koja razumije izazove i radosti roditeljstva.
+                  Support, understanding, and reliable educational guidance for families 
+                  navigating the challenges and joys of parenting.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -203,11 +204,12 @@ export default function HomePage() {
                 <div className="w-24 h-24 bg-accent/15 rounded-full flex items-center justify-center mx-auto mb-6">
                   <GraduationCap className="w-12 h-12 text-accent" />
                 </div>
-                <CardTitle className="text-xl">Edukatori i terapeuti</CardTitle>
+                <CardTitle className="text-xl">For Educators</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-base leading-relaxed">
-                  Profesionalni resursi i alati za one koji rade sa djecom svakodnevno.
+                  Tools and resources that strengthen inclusive teaching for those 
+                  who work with children every day.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -224,30 +226,30 @@ export default function HomePage() {
           <div className="text-center mb-20">
             <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Blog</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Savjeti, podrška i znanje
+              Knowledge, Support & Understanding for Parents
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Pratite naš blog za korisne članke i savjete stručnjaka.
+              Follow our blog for helpful articles and expert advice.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
             {[
               {
-                title: "Emocionalni razvoj djeteta",
-                description: "Kako prepoznati i podržati emocionalne potrebe vašeg djeteta kroz različite faze razvoja.",
+                title: "Understanding Emotional Development",
+                description: "How to recognize and support your child's emotional needs through different stages of development.",
                 icon: Heart,
                 color: "highlight"
               },
               {
-                title: "Izazovi roditeljstva",
-                description: "Praktični savjeti za svakodnevne situacije i kako ostati smiren u stresnim momentima.",
+                title: "Daily Learning Challenges",
+                description: "Practical tips for everyday situations and how to stay calm during stressful moments.",
                 icon: HandHeart,
                 color: "primary"
               },
               {
-                title: "Teškoće u učenju",
-                description: "Strategije i tehnike koje pomažu djeci sa teškoćama u učenju da napreduju.",
+                title: "Building Routines with Confidence",
+                description: "Strategies and techniques that help children with learning difficulties to thrive.",
                 icon: Star,
                 color: "accent"
               }
@@ -273,7 +275,7 @@ export default function HomePage() {
                   <CardContent>
                     <CardDescription className="text-base mb-5 leading-relaxed">{post.description}</CardDescription>
                     <Button variant="link" className="p-0 h-auto font-semibold text-primary">
-                      Pročitaj više <ArrowRight className="w-4 h-4 ml-1" />
+                      Read the Blog <ArrowRight className="w-4 h-4 ml-1" />
                     </Button>
                   </CardContent>
                 </Card>
@@ -287,22 +289,23 @@ export default function HomePage() {
       <section className="section-padding bg-muted/50">
         <div className="container-section">
           <div className="text-center mb-16">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Principi</span>
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Principles</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Naše vrijednosti
+              Our Core Values
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Principi koji vode sve što radimo.
+              Every child deserves dignity, understanding, and a chance to grow with confidence.
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 lg:gap-8">
             {[
-              { icon: Heart, label: "Empatija", color: "text-highlight", bg: "bg-highlight/15" },
-              { icon: Users, label: "Inkluzija", color: "text-primary", bg: "bg-primary/10" },
-              { icon: Shield, label: "Sigurnost", color: "text-accent", bg: "bg-accent/15" },
-              { icon: Sparkles, label: "Razvoj", color: "text-secondary", bg: "bg-secondary/30" },
-              { icon: HandHeart, label: "Zajedništvo", color: "text-highlight", bg: "bg-highlight/15" },
+              { icon: Heart, label: "Empathy", color: "text-highlight", bg: "bg-highlight/15" },
+              { icon: Users, label: "Inclusion", color: "text-primary", bg: "bg-primary/10" },
+              { icon: Shield, label: "Safety", color: "text-accent", bg: "bg-accent/15" },
+              { icon: Sparkles, label: "Growth", color: "text-secondary", bg: "bg-secondary/30" },
+              { icon: HandHeart, label: "Community", color: "text-highlight", bg: "bg-highlight/15" },
+              { icon: Star, label: "Trust", color: "text-primary", bg: "bg-primary/10" },
             ].map((value, index) => (
               <div key={index} className="text-center group">
                 <div className={`w-20 h-20 ${value.bg} rounded-3xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300`}>
@@ -325,15 +328,15 @@ export default function HomePage() {
         
         <div className="container-section relative z-10 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-8 leading-tight max-w-4xl mx-auto">
-            Zajedno gradimo sigurniju budućnost za svako dijete.
+            Together, we build safer paths for every child.
           </h2>
           <p className="text-lg lg:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Pridružite se našoj zajednici roditelja, edukatora i stručnjaka koji zajedno 
-            stvaraju pozitivnu promjenu.
+            Join our community of parents, educators, and professionals who are 
+            creating positive change together.
           </p>
           <Button variant="highlight" size="xl" asChild>
             <Link to="/o-nama#kontakt">
-              Pridruži se zajednici
+              Join Our Community
               <ArrowRight className="w-6 h-6" />
             </Link>
           </Button>
