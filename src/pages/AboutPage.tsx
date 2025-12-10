@@ -21,27 +21,27 @@ import {
 
 const team = [
   {
-    role: "Edukatori",
+    role: "Educators",
     icon: GraduationCap,
-    description: "Stručnjaci sa iskustvom u radu sa djecom sa smetnjama u razvoju.",
+    description: "Professionals with experience working with children with developmental disabilities.",
     color: "primary"
   },
   {
-    role: "Terapeuti",
+    role: "Therapists",
     icon: Heart,
-    description: "Licencirani terapeuti posvećeni podršci razvoja svakog djeteta.",
+    description: "Licensed therapists dedicated to supporting every child's development.",
     color: "highlight"
   },
   {
-    role: "Psiholozi",
+    role: "Psychologists",
     icon: Brain,
-    description: "Stručnjaci za mentalno zdravlje i emocionalni razvoj.",
+    description: "Mental health experts specializing in emotional development.",
     color: "accent"
   },
   {
-    role: "Roditelji",
+    role: "Parents",
     icon: Users,
-    description: "Roditelji koji razumiju izazove i dijele svoja iskustva.",
+    description: "Parents who understand the challenges and share their experiences.",
     color: "secondary"
   },
 ];
@@ -63,8 +63,8 @@ export default function AboutPage() {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
-      title: "Poruka uspješno poslana!",
-      description: "Odgovorićemo vam u najkraćem mogućem roku.",
+      title: "Message sent successfully!",
+      description: "We will respond as soon as possible.",
     });
     
     setFormData({ name: "", email: "", message: "" });
@@ -82,14 +82,15 @@ export default function AboutPage() {
         
         <div className="container-section relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">O nama</span>
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">About Us</span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
-              Zašto je nastala{" "}
-              <span className="text-gradient">MENTORA PLUS</span>?
+              Why{" "}
+              <span className="text-gradient">MENTORA PLUS</span>{" "}
+              Exists
             </h1>
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
-              Vjerujemo da svako dijete zaslužuje priliku da uči, raste i ostvari 
-              svoj puni potencijal u sigurnom i podržavajućem okruženju.
+              We believe that every child deserves the opportunity to learn, grow, and 
+              reach their full potential in a safe and supportive environment.
             </p>
           </div>
         </div>
@@ -100,25 +101,22 @@ export default function AboutPage() {
         <div className="container-section">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <div>
-              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Naša priča</span>
+              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Our Story</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8">
-                Kako je sve počelo
+                How It All Started
               </h2>
               <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  MENTORA PLUS je nastala iz duboke želje da pomognemo djeci sa smetnjama 
-                  u razvoju i njihovim porodicama. Shvatili smo da postoji potreba za 
-                  pristupačnom, kvalitetnom i empatičnom edukativnom platformom.
+                  MENTORA PLUS was created from a deep belief that every child deserves 
+                  more understanding, more patience, and more opportunities.
                 </p>
                 <p>
-                  Naš tim stručnjaka - edukatora, terapeuta, psihologa i roditelja - 
-                  udružio je snage kako bi stvorio prostor gdje se svako dijete osjeća 
-                  prihvaćeno i podržano.
+                  We believe that true support comes from community — from parents, educators, 
+                  therapists, and children growing together.
                 </p>
                 <p>
-                  Vjerujemo da učenje treba biti zabavno, prilagođeno i sigurno. 
-                  Zato smo osmislili programe koji poštuju tempo svakog djeteta i 
-                  slave svaki korak naprijed.
+                  Our mission is to provide a safe digital place where learning, emotional growth, 
+                  and human connection meet.
                 </p>
               </div>
             </div>
@@ -129,11 +127,11 @@ export default function AboutPage() {
                   <div className="w-16 h-16 bg-primary/15 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Target className="w-8 h-8 text-primary" />
                   </div>
-                  <CardTitle className="text-lg">Naša misija</CardTitle>
+                  <CardTitle className="text-lg">Our Mission</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0 px-6 pb-6">
                   <CardDescription className="text-center leading-relaxed">
-                    Osnažiti svako dijete kroz prilagođeno učenje i podršku cijeloj porodici.
+                    Empower every child through adapted learning and support for the whole family.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -143,11 +141,11 @@ export default function AboutPage() {
                   <div className="w-16 h-16 bg-highlight/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Eye className="w-8 h-8 text-highlight" />
                   </div>
-                  <CardTitle className="text-lg">Naša vizija</CardTitle>
+                  <CardTitle className="text-lg">Our Vision</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0 px-6 pb-6">
                   <CardDescription className="text-center leading-relaxed">
-                    Svijet u kojem svako dijete ima pristup kvalitetnoj edukaciji bez obzira na izazove.
+                    A world where every child has access to quality education regardless of challenges.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -157,12 +155,12 @@ export default function AboutPage() {
                   <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Star className="w-8 h-8 text-accent" />
                   </div>
-                  <CardTitle className="text-lg">Dugoročni cilj</CardTitle>
+                  <CardTitle className="text-lg">Long-Term Goal</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0 px-6 pb-6">
                   <CardDescription className="text-center leading-relaxed">
-                    Postati vodeća platforma za inkluzivno obrazovanje u regiji, 
-                    pomažući hiljadama porodica na njihovom putu.
+                    Become the leading platform for inclusive education in the region, 
+                    helping thousands of families on their journey.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -177,12 +175,13 @@ export default function AboutPage() {
         
         <div className="container-section pt-8">
           <div className="text-center mb-20">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Naš tim</span>
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Our Team</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Ko stoji iza MENTORA PLUS?
+              Who Is Behind MENTORA PLUS?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Naš tim čine stručnjaci posvećeni podršci djece i porodica.
+              Our platform is built by parents, educators, therapists, and professionals 
+              who understand the real challenges families face every day.
             </p>
           </div>
           
@@ -220,19 +219,19 @@ export default function AboutPage() {
         
         <div className="container-section pt-8">
           <div className="text-center mb-16">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Kontakt</span>
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Contact</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Javite nam se
+              Get in Touch With Us
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Imate pitanja? Želite saznati više? Tu smo za vas.
+              Have questions? Want to learn more? We are here for you.
             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto">
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-8">
-                Zašto nas kontaktirati?
+                Why Contact Us?
               </h3>
               
               <div className="space-y-6">
@@ -241,8 +240,8 @@ export default function AboutPage() {
                     <Clock className="w-7 h-7 text-highlight" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground text-lg mb-1">Brz odgovor</h4>
-                    <p className="text-muted-foreground leading-relaxed">Odgovaramo na upite u roku od 24 sata.</p>
+                    <h4 className="font-bold text-foreground text-lg mb-1">Fast Response</h4>
+                    <p className="text-muted-foreground leading-relaxed">We respond to inquiries within 24 hours.</p>
                   </div>
                 </div>
                 
@@ -251,8 +250,8 @@ export default function AboutPage() {
                     <Heart className="w-7 h-7 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground text-lg mb-1">Puna podrška</h4>
-                    <p className="text-muted-foreground leading-relaxed">Naš tim je tu da vam pomogne u svakom koraku.</p>
+                    <h4 className="font-bold text-foreground text-lg mb-1">Full Support</h4>
+                    <p className="text-muted-foreground leading-relaxed">Our team is here to help you every step of the way.</p>
                   </div>
                 </div>
                 
@@ -261,8 +260,8 @@ export default function AboutPage() {
                     <MessageCircle className="w-7 h-7 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground text-lg mb-1">Stručna pomoć</h4>
-                    <p className="text-muted-foreground leading-relaxed">Povezat ćemo vas sa pravim stručnjakom za vaše potrebe.</p>
+                    <h4 className="font-bold text-foreground text-lg mb-1">Expert Help</h4>
+                    <p className="text-muted-foreground leading-relaxed">We will connect you with the right expert for your needs.</p>
                   </div>
                 </div>
               </div>
@@ -270,20 +269,20 @@ export default function AboutPage() {
             
             <Card className="shadow-hover bg-card">
               <CardHeader>
-                <CardTitle className="text-2xl">Pošaljite upit</CardTitle>
+                <CardTitle className="text-2xl">Send Message</CardTitle>
                 <CardDescription className="text-base">
-                  Popunite formular ispod i javićemo vam se uskoro.
+                  Fill out the form below and we will get back to you soon.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-semibold text-foreground">
-                      Ime i prezime
+                      Full Name
                     </label>
                     <Input
                       id="name"
-                      placeholder="Vaše ime i prezime"
+                      placeholder="Your full name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
@@ -293,12 +292,12 @@ export default function AboutPage() {
                   
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-semibold text-foreground">
-                      Email adresa
+                      Email Address
                     </label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder="vasa@email.com"
+                      placeholder="your@email.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
@@ -308,11 +307,11 @@ export default function AboutPage() {
                   
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-semibold text-foreground">
-                      Poruka
+                      Your Message
                     </label>
                     <Textarea
                       id="message"
-                      placeholder="Opišite kako vam možemo pomoći..."
+                      placeholder="Describe how we can help you..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       required
@@ -328,17 +327,17 @@ export default function AboutPage() {
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
-                      "Šaljem..."
+                      "Sending..."
                     ) : (
                       <>
-                        Pošalji upit
+                        Send Message
                         <Send className="w-5 h-5" />
                       </>
                     )}
                   </Button>
                   
                   <p className="text-sm text-muted-foreground text-center pt-2">
-                    Odgovaramo u najkraćem mogućem roku. Tu smo za vas.
+                    We respond as soon as possible. You are not alone — we are here for you.
                   </p>
                 </form>
               </CardContent>
