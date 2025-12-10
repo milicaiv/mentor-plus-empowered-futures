@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, Mail, Phone } from "lucide-react";
+import logo from "@/assets/mentora-plus-logo.png";
 
 export function Footer() {
   return (
@@ -12,9 +13,11 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-2xl bg-highlight flex items-center justify-center shadow-soft">
-                <span className="text-highlight-foreground font-bold text-xl font-heading">M+</span>
-              </div>
+              <img 
+                src={logo} 
+                alt="MENTORA PLUS Logo" 
+                className="h-14 w-auto bg-white/90 rounded-2xl p-1"
+              />
               <span className="font-bold text-2xl font-heading">MENTORA PLUS</span>
             </Link>
             <p className="text-primary-foreground/80 max-w-md leading-relaxed text-lg mb-6">
