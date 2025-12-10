@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/mentora-plus-logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -19,9 +20,11 @@ export function Header() {
       <nav className="container-section flex items-center justify-between py-4 lg:py-5" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-2xl bg-primary flex items-center justify-center shadow-soft group-hover:shadow-card transition-all duration-300">
-              <span className="text-primary-foreground font-bold text-lg font-heading">M+</span>
-            </div>
+            <img 
+              src={logo} 
+              alt="MENTORA PLUS Logo" 
+              className="h-12 w-auto group-hover:scale-105 transition-transform duration-300"
+            />
             <span className="font-bold text-xl text-primary font-heading tracking-tight">MENTORA PLUS</span>
           </Link>
         </div>
@@ -67,9 +70,11 @@ export function Header() {
         <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-card px-6 py-6 sm:max-w-sm shadow-hover">
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
-              <div className="w-11 h-11 rounded-2xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg font-heading">M+</span>
-              </div>
+              <img 
+                src={logo} 
+                alt="MENTORA PLUS Logo" 
+                className="h-12 w-auto"
+              />
               <span className="font-bold text-xl text-primary font-heading">MENTORA PLUS</span>
             </Link>
             <button
