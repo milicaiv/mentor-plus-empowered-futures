@@ -15,75 +15,80 @@ import {
   Star,
   CheckCircle
 } from "lucide-react";
-import heroImage from "@/assets/hero-illustration.png";
+import heroBackground from "@/assets/hero-background.png";
 
 export default function HomePage() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="gradient-hero min-h-[92vh] flex items-center relative overflow-hidden">
-        {/* Decorative elements */}
+      {/* Hero Section with Background Illustration */}
+      <section className="min-h-[92vh] flex items-center relative overflow-hidden">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroBackground} 
+            alt="" 
+            className="w-full h-full object-cover object-center"
+            aria-hidden="true"
+          />
+          {/* Overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+        </div>
+        
+        {/* Decorative floating elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-highlight/10 rounded-full blur-3xl animate-float-slow" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float" />
         </div>
         
         <div className="container-section relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2.5 bg-highlight/15 border border-highlight/30 text-foreground px-5 py-2.5 rounded-full text-sm font-semibold mb-8 animate-fade-up">
-                <Sparkles className="w-4 h-4 text-highlight" />
-                <span>Digital Educational Platform</span>
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-[1.15] mb-8 animate-fade-up animation-delay-100">
-                Support that{" "}
-                <span className="text-gradient">empowers</span>{" "}
-                every child.
-              </h1>
-              
-              <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-up animation-delay-200">
-                A modern educational platform for children with developmental disabilities, 
-                created to support learning, emotional growth, and family confidence.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start animate-fade-up animation-delay-300">
-                <Button variant="hero" size="lg" asChild>
-                  <Link to="/programi">
-                    Explore the Platform
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </Button>
-                <Button variant="heroOutline" size="lg" asChild>
-                  <Link to="/o-nama#kontakt">Contact Us</Link>
-                </Button>
-              </div>
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2.5 bg-card/80 backdrop-blur-sm border border-highlight/30 text-foreground px-5 py-2.5 rounded-full text-sm font-semibold mb-8 animate-fade-up shadow-soft">
+              <Sparkles className="w-4 h-4 text-highlight" />
+              <span>Digital Educational Platform</span>
             </div>
             
-            <div className="relative animate-fade-up animation-delay-400">
-              <div className="relative rounded-4xl overflow-hidden shadow-hover">
-                <img 
-                  src={heroImage} 
-                  alt="Children, parents and educators learning and growing together" 
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              {/* Floating stat card */}
-              <div className="absolute -bottom-6 -left-6 bg-card rounded-3xl p-5 shadow-hover animate-float border border-border/50">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-highlight/20 rounded-2xl flex items-center justify-center">
-                    <Heart className="w-7 h-7 text-highlight" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-2xl text-foreground font-heading">500+</p>
-                    <p className="text-sm text-muted-foreground font-medium">Happy Families</p>
-                  </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] mb-8 animate-fade-up animation-delay-100">
+              Support that{" "}
+              <span className="text-gradient">empowers</span>{" "}
+              every child.
+            </h1>
+            
+            <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-10 max-w-2xl leading-relaxed animate-fade-up animation-delay-200">
+              A modern educational platform for children with developmental disabilities, 
+              created to support learning, emotional growth, and family confidence.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-5 animate-fade-up animation-delay-300">
+              <Button variant="hero" size="xl" asChild>
+                <Link to="/programi">
+                  Explore the Platform
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </Button>
+              <Button variant="heroOutline" size="lg" asChild>
+                <Link to="/o-nama#kontakt">Contact Us</Link>
+              </Button>
+            </div>
+            
+            {/* Trust indicators */}
+            <div className="flex flex-wrap items-center gap-8 mt-14 animate-fade-up animation-delay-400">
+              <div className="flex items-center gap-3 bg-card/70 backdrop-blur-sm rounded-2xl px-5 py-3 shadow-soft">
+                <div className="w-12 h-12 bg-highlight/20 rounded-xl flex items-center justify-center">
+                  <Heart className="w-6 h-6 text-highlight" />
+                </div>
+                <div>
+                  <p className="font-bold text-xl text-foreground font-heading">500+</p>
+                  <p className="text-sm text-muted-foreground">Happy Families</p>
                 </div>
               </div>
-              {/* Second floating element */}
-              <div className="absolute -top-4 -right-4 bg-accent/90 text-accent-foreground rounded-2xl p-4 shadow-card animate-float animation-delay-300">
-                <CheckCircle className="w-8 h-8" />
+              <div className="flex items-center gap-3 bg-card/70 backdrop-blur-sm rounded-2xl px-5 py-3 shadow-soft">
+                <div className="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center">
+                  <CheckCircle className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <p className="font-bold text-xl text-foreground font-heading">5</p>
+                  <p className="text-sm text-muted-foreground">Learning Programs</p>
+                </div>
               </div>
             </div>
           </div>
