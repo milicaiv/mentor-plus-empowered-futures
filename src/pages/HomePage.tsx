@@ -162,8 +162,6 @@ export default function HomePage() {
 
       {/* Who is it for - Light blue background */}
       <section className="section-padding bg-section-light relative">
-        {/* Curved top */}
-        <div className="absolute top-0 left-0 right-0 h-16 bg-card" style={{ borderRadius: '0 0 50% 50% / 0 0 100% 100%' }} />
         
         <div className="container-section pt-8">
           <div className="text-center mb-20">
@@ -239,8 +237,6 @@ export default function HomePage() {
 
       {/* Blog Preview */}
       <section className="section-padding bg-card relative">
-        {/* Curved top */}
-        <div className="absolute top-0 left-0 right-0 h-16 bg-section-light" style={{ borderRadius: '0 0 50% 50% / 0 0 100% 100%' }} />
         
         <div className="container-section pt-8">
           <div className="text-center mb-20">

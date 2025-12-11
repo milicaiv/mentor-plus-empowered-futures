@@ -180,7 +180,6 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section className="section-padding bg-section-light relative">
-        <div className="absolute top-0 left-0 right-0 h-16 bg-card" style={{ borderRadius: '0 0 50% 50% / 0 0 100% 100%' }} />
         
         <div className="container-section pt-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -233,7 +232,6 @@ export default function AboutPage() {
 
       {/* Contact Section */}
       <section id="kontakt" className="section-padding bg-card relative scroll-mt-24">
-        <div className="absolute top-0 left-0 right-0 h-16 bg-section-light" style={{ borderRadius: '0 0 50% 50% / 0 0 100% 100%' }} />
         
         <div className="container-section pt-8">
           <div className="text-center mb-16">
