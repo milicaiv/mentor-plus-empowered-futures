@@ -5,9 +5,6 @@ import logo from "@/assets/mentora-plus-logo.png";
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      {/* Curved top edge */}
-      <div className="h-12 bg-card" style={{ borderRadius: '0 0 50% 50% / 0 0 100% 100%' }} />
-      
       <div className="container-section py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
@@ -16,7 +13,7 @@ export function Footer() {
               <img 
                 src={logo} 
                 alt="MENTORA PLUS Logo" 
-                className="h-14 w-auto bg-white/90 rounded-2xl p-1"
+                className="h-14 w-auto bg-white rounded-2xl p-1.5"
               />
               <span className="font-bold text-2xl font-heading">MENTORA PLUS</span>
             </Link>
