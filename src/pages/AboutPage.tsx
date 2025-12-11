@@ -13,11 +13,12 @@ import {
   GraduationCap,
   Brain,
   Send,
-  CheckCircle,
   Star,
   Clock,
   MessageCircle
 } from "lucide-react";
+import illustrationEducatorChild from "@/assets/illustration-educator-child.png";
+import illustrationCommunity from "@/assets/illustration-community.png";
 
 const team = [
   {
@@ -119,6 +120,14 @@ export default function AboutPage() {
                   and human connection meet.
                 </p>
               </div>
+              
+              <div className="mt-8">
+                <img 
+                  src={illustrationEducatorChild} 
+                  alt="Educator guiding a child through learning" 
+                  className="w-full max-w-md rounded-3xl shadow-soft"
+                />
+              </div>
             </div>
             
             <div className="grid grid-cols-2 gap-6">
@@ -174,15 +183,24 @@ export default function AboutPage() {
         <div className="absolute top-0 left-0 right-0 h-16 bg-card" style={{ borderRadius: '0 0 50% 50% / 0 0 100% 100%' }} />
         
         <div className="container-section pt-8">
-          <div className="text-center mb-20">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Our Team</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Who Is Behind MENTORA PLUS?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Our platform is built by parents, educators, therapists, and professionals 
-              who understand the real challenges families face every day.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="flex justify-center order-2 lg:order-1">
+              <img 
+                src={illustrationCommunity} 
+                alt="Community of parents, educators, and children" 
+                className="w-full max-w-sm rounded-3xl shadow-soft"
+              />
+            </div>
+            <div className="text-center lg:text-left order-1 lg:order-2">
+              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Our Team</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Who Is Behind MENTORA PLUS?
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our platform is built by parents, educators, therapists, and professionals 
+                who understand the real challenges families face every day.
+              </p>
+            </div>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -6,7 +6,6 @@ import {
   BookOpen, 
   Users, 
   GraduationCap, 
-  Baby, 
   Heart, 
   Shield, 
   Sparkles, 
@@ -16,6 +15,10 @@ import {
   CheckCircle
 } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
+import illustrationChildLearning from "@/assets/illustration-child-learning.png";
+import illustrationParentChild from "@/assets/illustration-parent-child.png";
+import illustrationEducatorChild from "@/assets/illustration-educator-child.png";
+import illustrationCommunity from "@/assets/illustration-community.png";
 
 export default function HomePage() {
   return (
@@ -174,11 +177,15 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
-            <Card className="card-hover border-2 border-transparent hover:border-primary/20 bg-card">
+            <Card className="card-hover border-2 border-transparent hover:border-primary/20 bg-card overflow-hidden">
+              <div className="h-48 bg-secondary/20 flex items-center justify-center p-4">
+                <img 
+                  src={illustrationChildLearning} 
+                  alt="Child learning through play" 
+                  className="h-full w-auto object-contain"
+                />
+              </div>
               <CardHeader className="text-center pb-4">
-                <div className="w-24 h-24 bg-secondary/40 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Baby className="w-12 h-12 text-primary" />
-                </div>
                 <CardTitle className="text-xl">For Children</CardTitle>
               </CardHeader>
               <CardContent>
@@ -189,11 +196,15 @@ export default function HomePage() {
               </CardContent>
             </Card>
             
-            <Card className="card-hover border-2 border-transparent hover:border-highlight/30 bg-card">
+            <Card className="card-hover border-2 border-transparent hover:border-highlight/30 bg-card overflow-hidden">
+              <div className="h-48 bg-highlight/10 flex items-center justify-center p-4">
+                <img 
+                  src={illustrationParentChild} 
+                  alt="Parent and child learning together" 
+                  className="h-full w-auto object-contain"
+                />
+              </div>
               <CardHeader className="text-center pb-4">
-                <div className="w-24 h-24 bg-highlight/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Heart className="w-12 h-12 text-highlight" />
-                </div>
                 <CardTitle className="text-xl">For Parents</CardTitle>
               </CardHeader>
               <CardContent>
@@ -204,11 +215,15 @@ export default function HomePage() {
               </CardContent>
             </Card>
             
-            <Card className="card-hover border-2 border-transparent hover:border-accent/30 bg-card">
+            <Card className="card-hover border-2 border-transparent hover:border-accent/30 bg-card overflow-hidden">
+              <div className="h-48 bg-accent/10 flex items-center justify-center p-4">
+                <img 
+                  src={illustrationEducatorChild} 
+                  alt="Educator guiding a child" 
+                  className="h-full w-auto object-contain"
+                />
+              </div>
               <CardHeader className="text-center pb-4">
-                <div className="w-24 h-24 bg-accent/15 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <GraduationCap className="w-12 h-12 text-accent" />
-                </div>
                 <CardTitle className="text-xl">For Educators</CardTitle>
               </CardHeader>
               <CardContent>
@@ -293,32 +308,42 @@ export default function HomePage() {
       {/* Values Section */}
       <section className="section-padding bg-muted/50">
         <div className="container-section">
-          <div className="text-center mb-16">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Principles</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Our Core Values
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Every child deserves dignity, understanding, and a chance to grow with confidence.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 lg:gap-8">
-            {[
-              { icon: Heart, label: "Empathy", color: "text-highlight", bg: "bg-highlight/15" },
-              { icon: Users, label: "Inclusion", color: "text-primary", bg: "bg-primary/10" },
-              { icon: Shield, label: "Safety", color: "text-accent", bg: "bg-accent/15" },
-              { icon: Sparkles, label: "Growth", color: "text-secondary", bg: "bg-secondary/30" },
-              { icon: HandHeart, label: "Community", color: "text-highlight", bg: "bg-highlight/15" },
-              { icon: Star, label: "Trust", color: "text-primary", bg: "bg-primary/10" },
-            ].map((value, index) => (
-              <div key={index} className="text-center group">
-                <div className={`w-20 h-20 ${value.bg} rounded-3xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300`}>
-                  <value.icon className={`w-10 h-10 ${value.color}`} />
-                </div>
-                <p className="font-bold text-foreground text-lg">{value.label}</p>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Principles</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Our Core Values
+              </h2>
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+                Every child deserves dignity, understanding, and a chance to grow with confidence.
+              </p>
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                {[
+                  { icon: Heart, label: "Empathy", color: "text-highlight", bg: "bg-highlight/15" },
+                  { icon: Users, label: "Inclusion", color: "text-primary", bg: "bg-primary/10" },
+                  { icon: Shield, label: "Safety", color: "text-accent", bg: "bg-accent/15" },
+                  { icon: Sparkles, label: "Growth", color: "text-secondary", bg: "bg-secondary/30" },
+                  { icon: HandHeart, label: "Community", color: "text-highlight", bg: "bg-highlight/15" },
+                  { icon: Star, label: "Trust", color: "text-primary", bg: "bg-primary/10" },
+                ].map((value, index) => (
+                  <div key={index} className="text-center group">
+                    <div className={`w-16 h-16 ${value.bg} rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                      <value.icon className={`w-8 h-8 ${value.color}`} />
+                    </div>
+                    <p className="font-bold text-foreground">{value.label}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            
+            <div className="flex justify-center">
+              <img 
+                src={illustrationCommunity} 
+                alt="Diverse community of parents, children, and educators" 
+                className="w-full max-w-md rounded-3xl shadow-soft"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -20,6 +20,7 @@ import {
   Wifi,
   Car
 } from "lucide-react";
+import illustrationChildLearning from "@/assets/illustration-child-learning.png";
 
 const programs = [
   {
@@ -107,17 +108,26 @@ export default function ProgramsPage() {
         </div>
         
         <div className="container-section relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Educational Programs</span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
-              What Children Learn on the{" "}
-              <span className="text-gradient">MENTORA PLUS</span>{" "}
-              Platform
-            </h1>
-            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
-              Our programs are carefully designed to support the overall development of every child 
-              through adapted and engaging activities.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Educational Programs</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
+                What Children Learn on the{" "}
+                <span className="text-gradient">MENTORA PLUS</span>{" "}
+                Platform
+              </h1>
+              <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
+                Our programs are carefully designed to support the overall development of every child 
+                through adapted and engaging activities.
+              </p>
+            </div>
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src={illustrationChildLearning} 
+                alt="Child learning through play" 
+                className="w-full max-w-sm rounded-3xl shadow-soft"
+              />
+            </div>
           </div>
         </div>
       </section>
