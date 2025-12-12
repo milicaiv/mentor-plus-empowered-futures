@@ -14,6 +14,8 @@ export function Footer() {
                 src={logo} 
                 alt="MENTORA PLUS Logo" 
                 className="h-14 w-auto bg-white rounded-2xl p-1.5"
+                loading="eager"
+                fetchPriority="high"
               />
               <span className="font-bold text-2xl font-heading">MENTORA PLUS</span>
             </Link>
