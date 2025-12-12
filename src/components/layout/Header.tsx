@@ -24,6 +24,9 @@ export function Header() {
               src={logo} 
               alt="MENTORA PLUS Logo" 
               className="h-14 lg:h-16 w-auto group-hover:scale-105 transition-transform duration-300"
+              loading="eager"
+              fetchPriority="high"
+              decoding="sync"
             />
             <span className="font-bold text-xl text-primary font-heading tracking-tight">MENTORA PLUS</span>
           </Link>
@@ -74,6 +77,9 @@ export function Header() {
                 src={logo} 
                 alt="MENTORA PLUS Logo" 
                 className="h-14 w-auto"
+                loading="eager"
+                fetchPriority="high"
+                decoding="sync"
               />
               <span className="font-bold text-xl text-primary font-heading">MENTORA PLUS</span>
             </Link>
