@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/mentora-plus-logo.png";
+const logo = "/images/mentora-plus-logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
