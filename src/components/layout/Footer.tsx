@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, Mail, Phone } from "lucide-react";
-const logo = "/images/mentora-plus-logo.png";
+import logo from "@/assets/mentora-plus-logo.png";
 
 export function Footer() {
   return (
