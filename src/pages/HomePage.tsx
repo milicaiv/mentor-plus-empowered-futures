@@ -180,7 +180,7 @@ export default function HomePage() {
                 <img 
                   src={illustrationChildLearning} 
                   alt="Child learning through play" 
-                  className="h-full w-auto object-contain"
+                  className="h-full w-auto object-contain illustration-blend"
                 />
               </div>
               <CardHeader className="text-center pb-4">
@@ -199,7 +199,7 @@ export default function HomePage() {
                 <img 
                   src={illustrationParentChild} 
                   alt="Parent and child learning together" 
-                  className="h-full w-auto object-contain"
+                  className="h-full w-auto object-contain illustration-blend"
                 />
               </div>
               <CardHeader className="text-center pb-4">
@@ -218,7 +218,7 @@ export default function HomePage() {
                 <img 
                   src={illustrationEducatorChild} 
                   alt="Educator guiding a child" 
-                  className="h-full w-auto object-contain"
+                  className="h-full w-auto object-contain illustration-blend"
                 />
               </div>
               <CardHeader className="text-center pb-4">
@@ -337,7 +337,7 @@ export default function HomePage() {
               <img 
                 src={illustrationCommunity} 
                 alt="Diverse community of parents, children, and educators" 
-                className="w-full max-w-md rounded-3xl shadow-soft"
+                className="w-full max-w-md rounded-3xl shadow-soft illustration-blend"
               />
             </div>
           </div>

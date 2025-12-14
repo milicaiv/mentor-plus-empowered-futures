@@ -217,6 +217,11 @@
   .icon-container-secondary {
     @apply bg-secondary/30;
   }
+
+  /* Remove white background from illustrations */
+  .illustration-blend {
+    mix-blend-mode: multiply;
+  }
 }
 
 @layer utilities {
