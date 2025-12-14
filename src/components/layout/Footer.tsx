@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, Mail, Phone } from "lucide-react";
-import logo from "@/assets/mentora-plus-logo.png";
+import logo from "@/assets/logo-min.png";
 
 export function Footer() {
   return (
@@ -29,7 +29,7 @@ export function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg mb-6 font-heading">Quick Links</h3>
+            <h3 className="font-bold text-lg mb-6 font-heading text-white">Quick Links</h3>
             <ul className="space-y-4">
               <li>
                 <Link to="/" className="text-primary-foreground/80 hover:text-highlight transition-colors text-base flex items-center gap-2">
@@ -60,7 +60,7 @@ export function Footer() {
           
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-lg mb-6 font-heading">Contact</h3>
+            <h3 className="font-bold text-lg mb-6 font-heading text-white">Contact</h3>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-primary-foreground/80">
                 <div className="w-10 h-10 rounded-xl bg-highlight/20 flex items-center justify-center flex-shrink-0">

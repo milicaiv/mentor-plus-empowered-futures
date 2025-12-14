@@ -160,12 +160,12 @@ export default function ProgramsPage() {
                         {program.topics.map((topic, topicIndex) => (
                           <div 
                             key={topicIndex}
-                            className="flex items-center gap-3 bg-card p-4 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 group hover:-translate-y-0.5 min-w-0"
+                            className="flex items-center gap-3 bg-card p-4 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 group hover:-translate-y-0.5"
                           >
                             <div className={`w-10 h-10 flex-shrink-0 ${colors.bg} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                               <topic.icon className={`w-5 h-5 ${colors.text}`} />
                             </div>
-                            <span className="font-medium text-foreground text-sm truncate">{topic.label}</span>
+                            <span className="font-medium text-foreground text-sm leading-tight">{topic.label}</span>
                           </div>
                         ))}
                       </div>
