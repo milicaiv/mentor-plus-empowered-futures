@@ -125,7 +125,7 @@ export default function AboutPage() {
                 <img 
                   src={illustrationEducatorChild} 
                   alt="Educator guiding a child through learning" 
-                  className="w-full max-w-md rounded-3xl shadow-soft"
+                  className="w-full max-w-md rounded-3xl shadow-soft illustration-blend"
                 />
               </div>
             </div>
@@ -187,7 +187,7 @@ export default function AboutPage() {
               <img 
                 src={illustrationCommunity} 
                 alt="Community of parents, educators, and children" 
-                className="w-full max-w-sm rounded-3xl shadow-soft"
+                className="w-full max-w-sm rounded-3xl shadow-soft illustration-blend"
               />
             </div>
             <div className="text-center lg:text-left order-1 lg:order-2">
