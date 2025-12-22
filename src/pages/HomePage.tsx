@@ -27,57 +27,60 @@ export default function HomePage() {
       <section className="min-h-[92vh] flex items-center relative overflow-hidden">
         {/* Hero Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src={heroBackground} 
-            alt="" 
+          <img
+            src={heroBackground}
+            alt=""
             className="w-full h-full object-cover object-center"
             aria-hidden="true"
           />
           {/* Overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60"/>
         </div>
-        
+
         {/* Decorative floating elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-highlight/10 rounded-full blur-3xl animate-float-slow" />
-          <div className="absolute bottom-20 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-highlight/10 rounded-full blur-3xl animate-float-slow"/>
+          <div className="absolute bottom-20 right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float"/>
         </div>
-        
-        <div className="container-section relative z-10">
+
+        <div className="container-section relative z-10 py-5">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2.5 bg-card/80 backdrop-blur-sm border border-highlight/30 text-foreground px-5 py-2.5 rounded-full text-sm font-semibold mb-8 animate-fade-up shadow-soft">
-              <Sparkles className="w-4 h-4 text-highlight" />
+            <div
+              className="inline-flex items-center gap-2.5 bg-card/80 backdrop-blur-sm border border-highlight/30 text-foreground px-5 py-2.5 rounded-full text-sm font-semibold mb-8 animate-fade-up shadow-soft">
+              <Sparkles className="w-4 h-4 text-highlight"/>
               <span>Digital Educational Platform</span>
             </div>
-            
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] mb-8 animate-fade-up animation-delay-100">
+
+            <h1
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] mb-8 animate-fade-up animation-delay-100">
               Support that{" "}
               <span className="text-gradient">empowers</span>{" "}
               every child.
             </h1>
-            
-            <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-10 max-w-2xl leading-relaxed animate-fade-up animation-delay-200">
-              A modern educational platform for children with developmental disabilities, 
+
+            <p
+              className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-10 max-w-2xl leading-relaxed animate-fade-up animation-delay-200">
+              A modern educational platform for children with developmental disabilities,
               created to support learning, emotional growth, and family confidence.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-5 animate-fade-up animation-delay-300">
               <Button variant="hero" size="xl" asChild>
                 <Link to="/programi">
                   Explore the Platform
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5"/>
                 </Link>
               </Button>
               <Button variant="heroOutline" size="lg" asChild>
                 <Link to="/o-nama#kontakt">Contact Us</Link>
               </Button>
             </div>
-            
+
             {/* Trust indicators */}
             <div className="flex flex-wrap items-center gap-8 mt-14 animate-fade-up animation-delay-400">
               <div className="flex items-center gap-3 bg-card/70 backdrop-blur-sm rounded-2xl px-5 py-3 shadow-soft">
                 <div className="w-12 h-12 bg-highlight/20 rounded-xl flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-highlight" />
+                  <Heart className="w-6 h-6 text-highlight"/>
                 </div>
                 <div>
                   <p className="font-bold text-xl text-foreground font-heading">500+</p>
@@ -86,7 +89,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-3 bg-card/70 backdrop-blur-sm rounded-2xl px-5 py-3 shadow-soft">
                 <div className="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center">
-                  <CheckCircle className="w-6 h-6 text-accent" />
+                  <CheckCircle className="w-6 h-6 text-accent"/>
                 </div>
                 <div>
                   <p className="font-bold text-xl text-foreground font-heading">5</p>
@@ -110,48 +113,51 @@ export default function HomePage() {
               A comprehensive platform supporting the whole family on their journey of development and learning.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
             <Card className="card-hover text-center group bg-card">
               <CardHeader className="pb-4">
-                <div className="w-20 h-20 icon-container icon-container-primary rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <BookOpen className="w-10 h-10 text-primary" />
+                <div
+                  className="w-20 h-20 icon-container icon-container-primary rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <BookOpen className="w-10 h-10 text-primary"/>
                 </div>
                 <CardTitle className="text-2xl">Personalized Learning</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  Structured educational content adapted to each child's needs and abilities, 
+                  Structured educational content adapted to each child's needs and abilities,
                   encouraging development in a fun and safe way.
                 </CardDescription>
               </CardContent>
             </Card>
-            
+
             <Card className="card-hover text-center group bg-card">
               <CardHeader className="pb-4">
-                <div className="w-20 h-20 icon-container icon-container-highlight rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-10 h-10 text-highlight" />
+                <div
+                  className="w-20 h-20 icon-container icon-container-highlight rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-10 h-10 text-highlight"/>
                 </div>
                 <CardTitle className="text-2xl">Parental Support</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  Educational blogs, expert advice, and emotional guidance for families 
+                  Educational blogs, expert advice, and emotional guidance for families
                   to feel supported and empowered on their journey.
                 </CardDescription>
               </CardContent>
             </Card>
-            
+
             <Card className="card-hover text-center group bg-card">
               <CardHeader className="pb-4">
-                <div className="w-20 h-20 icon-container icon-container-accent rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <GraduationCap className="w-10 h-10 text-accent" />
+                <div
+                  className="w-20 h-20 icon-container icon-container-accent rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <GraduationCap className="w-10 h-10 text-accent"/>
                 </div>
                 <CardTitle className="text-2xl">Professional Resources</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  A platform built for collaboration between parents, educators, and therapists 
+                  A platform built for collaboration between parents, educators, and therapists
                   working with children with developmental disabilities.
                 </CardDescription>
               </CardContent>
@@ -162,10 +168,11 @@ export default function HomePage() {
 
       {/* Who is it for - Light blue background */}
       <section className="section-padding bg-section-light relative">
-        
+
         <div className="container-section pt-8">
           <div className="text-center mb-20">
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Our Community</span>
+            <span
+              className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Our Community</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Who is MENTORA PLUS for?
             </h2>
@@ -173,13 +180,13 @@ export default function HomePage() {
               MENTORA PLUS is designed for everyone who wants to support children's development.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
             <Card className="card-hover border-2 border-transparent hover:border-primary/20 bg-card overflow-hidden">
               <div className="h-48 bg-secondary/20 flex items-center justify-center p-4">
-                <img 
-                  src={illustrationChildLearning} 
-                  alt="Child learning through play" 
+                <img
+                  src={illustrationChildLearning}
+                  alt="Child learning through play"
                   className="h-full w-auto object-contain illustration-blend"
                 />
               </div>
@@ -188,17 +195,17 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-base leading-relaxed">
-                  A safe digital space for learning, emotional development, and confidence building 
+                  A safe digital space for learning, emotional development, and confidence building
                   that respects each child's pace.
                 </CardDescription>
               </CardContent>
             </Card>
-            
+
             <Card className="card-hover border-2 border-transparent hover:border-highlight/30 bg-card overflow-hidden">
               <div className="h-48 bg-highlight/10 flex items-center justify-center p-4">
-                <img 
-                  src={illustrationParentChild} 
-                  alt="Parent and child learning together" 
+                <img
+                  src={illustrationParentChild}
+                  alt="Parent and child learning together"
                   className="h-full w-auto object-contain illustration-blend"
                 />
               </div>
@@ -207,17 +214,17 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-base leading-relaxed">
-                  Support, understanding, and reliable educational guidance for families 
+                  Support, understanding, and reliable educational guidance for families
                   navigating the challenges and joys of parenting.
                 </CardDescription>
               </CardContent>
             </Card>
-            
+
             <Card className="card-hover border-2 border-transparent hover:border-accent/30 bg-card overflow-hidden">
               <div className="h-48 bg-accent/10 flex items-center justify-center p-4">
-                <img 
-                  src={illustrationEducatorChild} 
-                  alt="Educator guiding a child" 
+                <img
+                  src={illustrationEducatorChild}
+                  alt="Educator guiding a child"
                   className="h-full w-auto object-contain illustration-blend"
                 />
               </div>
@@ -226,7 +233,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-base leading-relaxed">
-                  Tools and resources that strengthen inclusive teaching for those 
+                  Tools and resources that strengthen inclusive teaching for those
                   who work with children every day.
                 </CardDescription>
               </CardContent>
@@ -237,7 +244,7 @@ export default function HomePage() {
 
       {/* Blog Preview */}
       <section className="section-padding bg-card relative">
-        
+
         <div className="container-section pt-8">
           <div className="text-center mb-20">
             <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Blog</span>
@@ -248,7 +255,7 @@ export default function HomePage() {
               Follow our blog for helpful articles and expert advice.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
             {[
               {
@@ -271,18 +278,18 @@ export default function HomePage() {
               }
             ].map((post, index) => {
               const colorClasses: Record<string, { bg: string; text: string; bar: string }> = {
-                highlight: { bg: "bg-highlight/20", text: "text-highlight", bar: "bg-highlight" },
-                primary: { bg: "bg-primary/10", text: "text-primary", bar: "bg-primary" },
-                accent: { bg: "bg-accent/15", text: "text-accent", bar: "bg-accent" },
+                highlight: {bg: "bg-highlight/20", text: "text-highlight", bar: "bg-highlight"},
+                primary: {bg: "bg-primary/10", text: "text-primary", bar: "bg-primary"},
+                accent: {bg: "bg-accent/15", text: "text-accent", bar: "bg-accent"},
               };
               const colors = colorClasses[post.color];
-              
+
               return (
                 <Card key={index} className="card-hover overflow-hidden group bg-card">
-                  <div className={`h-1.5 ${colors.bar}`} />
+                  <div className={`h-1.5 ${colors.bar}`}/>
                   <CardHeader className="pb-4">
                     <div className={`w-14 h-14 ${colors.bg} rounded-2xl flex items-center justify-center mb-4`}>
-                      <post.icon className={`w-7 h-7 ${colors.text}`} />
+                      <post.icon className={`w-7 h-7 ${colors.text}`}/>
                     </div>
                     <CardTitle className="group-hover:text-primary transition-colors text-xl">
                       {post.title}
@@ -291,7 +298,7 @@ export default function HomePage() {
                   <CardContent>
                     <CardDescription className="text-base mb-5 leading-relaxed">{post.description}</CardDescription>
                     <Button variant="link" className="p-0 h-auto font-semibold text-primary">
-                      Read the Blog <ArrowRight className="w-4 h-4 ml-1" />
+                      Read the Blog <ArrowRight className="w-4 h-4 ml-1"/>
                     </Button>
                   </CardContent>
                 </Card>
@@ -306,37 +313,39 @@ export default function HomePage() {
         <div className="container-section">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Principles</span>
+              <span
+                className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">Principles</span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 Our Core Values
               </h2>
               <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
                 Every child deserves dignity, understanding, and a chance to grow with confidence.
               </p>
-              
+
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                 {[
-                  { icon: Heart, label: "Empathy", color: "text-highlight", bg: "bg-highlight/15" },
-                  { icon: Users, label: "Inclusion", color: "text-primary", bg: "bg-primary/10" },
-                  { icon: Shield, label: "Safety", color: "text-accent", bg: "bg-accent/15" },
-                  { icon: Sparkles, label: "Growth", color: "text-secondary", bg: "bg-secondary/30" },
-                  { icon: HandHeart, label: "Community", color: "text-highlight", bg: "bg-highlight/15" },
-                  { icon: Star, label: "Trust", color: "text-primary", bg: "bg-primary/10" },
+                  {icon: Heart, label: "Empathy", color: "text-highlight", bg: "bg-highlight/15"},
+                  {icon: Users, label: "Inclusion", color: "text-primary", bg: "bg-primary/10"},
+                  {icon: Shield, label: "Safety", color: "text-accent", bg: "bg-accent/15"},
+                  {icon: Sparkles, label: "Growth", color: "text-secondary", bg: "bg-secondary/30"},
+                  {icon: HandHeart, label: "Community", color: "text-highlight", bg: "bg-highlight/15"},
+                  {icon: Star, label: "Trust", color: "text-primary", bg: "bg-primary/10"},
                 ].map((value, index) => (
                   <div key={index} className="text-center group">
-                    <div className={`w-16 h-16 ${value.bg} rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
-                      <value.icon className={`w-8 h-8 ${value.color}`} />
+                    <div
+                      className={`w-16 h-16 ${value.bg} rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                      <value.icon className={`w-8 h-8 ${value.color}`}/>
                     </div>
                     <p className="font-bold text-foreground">{value.label}</p>
                   </div>
                 ))}
               </div>
             </div>
-            
+
             <div className="flex justify-center">
-              <img 
-                src={illustrationCommunity} 
-                alt="Diverse community of parents, children, and educators" 
+              <img
+                src={illustrationCommunity}
+                alt="Diverse community of parents, children, and educators"
                 className="w-full max-w-md rounded-3xl shadow-soft illustration-blend"
               />
             </div>
@@ -348,22 +357,23 @@ export default function HomePage() {
       <section className="py-28 lg:py-36 bg-primary relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-highlight rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-highlight rounded-full blur-3xl"/>
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent rounded-full blur-3xl"/>
         </div>
-        
+
         <div className="container-section relative z-10 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-8 leading-tight max-w-4xl mx-auto">
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-8 leading-tight max-w-4xl mx-auto">
             Together, we build safer paths for every child.
           </h2>
           <p className="text-lg lg:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Join our community of parents, educators, and professionals who are 
+            Join our community of parents, educators, and professionals who are
             creating positive change together.
           </p>
           <Button variant="highlight" size="xl" asChild>
             <Link to="/o-nama#kontakt">
               Join Our Community
-              <ArrowRight className="w-6 h-6" />
+              <ArrowRight className="w-6 h-6"/>
             </Link>
           </Button>
         </div>

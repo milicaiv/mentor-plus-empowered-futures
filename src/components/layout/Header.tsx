@@ -17,12 +17,12 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md shadow-nav">
-      <nav className="container-section flex items-center justify-between py-4 lg:py-5" aria-label="Global">
+      <nav className="container-section flex items-center justify-between py-4 lg:py-3.5" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
-            <img 
-              src={logo} 
-              alt="MENTORA PLUS Logo" 
+            <img
+              src={logo}
+              alt="MENTORA PLUS Logo"
               className="h-14 lg:h-16 w-auto group-hover:scale-105 transition-transform duration-300"
               loading="eager"
               fetchPriority="high"
@@ -31,7 +31,7 @@ export function Header() {
             <span className="font-bold text-xl text-primary font-heading tracking-tight">MENTORA PLUS</span>
           </Link>
         </div>
-        
+
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -39,10 +39,10 @@ export function Header() {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open menu</span>
-            <Menu className="h-6 w-6" aria-hidden="true" />
+            <Menu className="h-6 w-6" aria-hidden="true"/>
           </button>
         </div>
-        
+
         <div className="hidden lg:flex lg:gap-x-10">
           {navigation.map((item) => (
             <Link
@@ -59,23 +59,23 @@ export function Header() {
             </Link>
           ))}
         </div>
-        
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button variant="highlight" asChild>
             <Link to="/o-nama#kontakt">Contact</Link>
           </Button>
         </div>
       </nav>
-      
+
       {/* Mobile menu */}
       <div className={cn("lg:hidden", mobileMenuOpen ? "block" : "hidden")}>
-        <div className="fixed inset-0 z-50 bg-foreground/20 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
+        <div className="fixed inset-0 z-50 bg-foreground/20 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)}/>
         <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-card px-6 py-6 sm:max-w-sm shadow-hover">
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5 flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
-              <img 
-                src={logo} 
-                alt="MENTORA PLUS Logo" 
+              <img
+                src={logo}
+                alt="MENTORA PLUS Logo"
                 className="h-14 w-auto"
                 loading="eager"
                 fetchPriority="high"
@@ -89,7 +89,7 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <X className="h-6 w-6" aria-hidden="true" />
+              <X className="h-6 w-6" aria-hidden="true"/>
             </button>
           </div>
           <div className="mt-8 flow-root">
