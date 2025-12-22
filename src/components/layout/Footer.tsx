@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, Mail, Phone } from "lucide-react";
-import logo from "@/assets/logo-min.png";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
