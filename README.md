@@ -1,3 +1,5 @@
+<img src="public/favicon.svg" width="100" alt="MENTORA PLUS Logo"/>
+
 # MENTORA PLUS
 
 **Podrška koja osnažuje | Edukativna platforma za djecu**
