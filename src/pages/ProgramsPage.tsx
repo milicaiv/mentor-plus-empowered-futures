@@ -45,7 +45,7 @@ const programs = [
     topics: [
       { icon: MessageCircle, label: "Serbian" },
       { icon: Globe, label: "English" },
-      { icon: MessageCircle, label: "Communication" },
+      { icon: MessageCircle, label: "Speech" },
     ]
   },
   {
